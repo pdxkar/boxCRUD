@@ -1,5 +1,9 @@
-package com.kroot.crudApp;
+/*
+package com.kroot.crudApp.model;
 
+import com.kroot.crudApp.model.Attribute;
+import com.kroot.crudApp.model.Box;
+import com.kroot.crudApp.model.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -28,4 +32,4 @@ public class Main {
         session.getTransaction().commit();
         session.close();
     }
-}
+}*/

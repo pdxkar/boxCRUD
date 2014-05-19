@@ -1,6 +1,5 @@
-package com.kroot.crudApp;
+package com.kroot.crudApp.model;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
