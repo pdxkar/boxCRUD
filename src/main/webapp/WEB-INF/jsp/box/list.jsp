@@ -26,12 +26,18 @@
     </thead>
     <tbody>
     <c:forEach items="${boxes}" var="box">
-        <tr>
-            <td><c:out value="${box.boxType}"/></td>
-            <td><c:out value="${box.attributes}"/></td>
+
+
+
+            <c:forEach items="${box.attributes}" var="attribute">
+                    <tr>
+                <td><c:out value="${box.boxType}"/></td>
+                <td><c:out value="${attribute.attribute}"/></td>
+
 
             <td><a href="/box/edit/<c:out value="${box.id}"/>"><spring:message code="box.edit.link.label"/></a></td>
             <td><a href="/box/delete/<c:out value="${box.id}"/>"><spring:message code="box.delete.link.label"/></a></td>
+                        </c:forEach>
         </tr>
     </c:forEach>
     </tbody>

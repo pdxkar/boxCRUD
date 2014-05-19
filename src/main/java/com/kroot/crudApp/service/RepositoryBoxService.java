@@ -73,8 +73,8 @@ public class RepositoryBoxService implements BoxService {
             throw new BoxNotFoundException();
         }
 
-      //  box.update(updated.getFirstName(), updated.getLastName());
         box.update(updated.getBoxType());
+     //   box.update(updated.getAttributes().toString());  //?!
 
         return box;
     }

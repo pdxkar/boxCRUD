@@ -17,7 +17,7 @@ public class Attribute {
     @Column(name="ATTRIBUTE")
     private String attribute;
 
-    @ManyToMany(mappedBy="attributes")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy="attributes")
     private Set<Box> boxes = new HashSet<Box>();
 
     public Attribute(){}

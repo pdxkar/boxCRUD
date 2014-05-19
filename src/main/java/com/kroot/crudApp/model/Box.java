@@ -3,15 +3,7 @@ package com.kroot.crudApp.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="BOX")
@@ -25,7 +17,7 @@ public class Box {
     @Column(name="BOXTYPE")
     private String boxType;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
     @JoinTable(name="BOX_ATTRIBUTE",
             joinColumns={@JoinColumn(name="BOX_ID")},
             inverseJoinColumns={@JoinColumn(name="ATTRIBUTE_ID")})
