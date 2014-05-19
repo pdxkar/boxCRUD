@@ -46,10 +46,7 @@ public class Box {
         this.boxType = boxType;
     }
 
-    /*Gets a Builder which is used to create a Box object */
-    public static Builder getBuilder(String boxType){
-        return new Builder(boxType);
-    }
+    public static Builder getBuilder(String boxType, Set<Attribute> attributes){   return new Builder(boxType, attributes); }
 
     public String getBoxType() {
         return boxType;
@@ -65,9 +62,10 @@ public class Box {
          * Creates a new Builder instance.
          * @param boxType The type of the created Box object.
          */
-        Builder(String boxType) {
+        Builder(String boxType, Set<Attribute> attributes) {
             built = new Box();
             built.boxType = boxType;
+            built.attributes = attributes;
 
         }
 
@@ -91,10 +89,6 @@ public class Box {
         this.boxId = boxId;
     }
 
-//    public String getBoxType() {
-//        return boxType;
-//    }
-
     public void setBoxType(String boxType) {
         this.boxType = boxType;
     }
@@ -103,7 +97,7 @@ public class Box {
         return attributes;
     }
 
-    public void setMeetings(Set<Attribute> attributes) {
+    public void setAttributes (Set<Attribute> attributes) {
         this.attributes = attributes;
     }
 }

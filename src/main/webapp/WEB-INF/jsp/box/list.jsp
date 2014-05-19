@@ -20,15 +20,16 @@
 <table>
     <thead>
     <tr>
-        <td><spring:message code="box.label.attribute"/></td>
-        <td><spring:message code="box.label.boxType"/></td>
+            <td><spring:message code="box.label.boxType"/></td>
+            <td><spring:message code="box.label.attributes"/></td>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${boxes}" var="box">
         <tr>
-            <td><c:out value="${box.attribute}"/></td>
             <td><c:out value="${box.boxType}"/></td>
+            <td><c:out value="${box.attributes}"/></td>
+
             <td><a href="/box/edit/<c:out value="${box.id}"/>"><spring:message code="box.edit.link.label"/></a></td>
             <td><a href="/box/delete/<c:out value="${box.id}"/>"><spring:message code="box.delete.link.label"/></a></td>
         </tr>

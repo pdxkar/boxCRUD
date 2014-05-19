@@ -17,9 +17,9 @@
                 <form:errors path="boxType" cssClass="error" element="div"/>
             </div>
             <div>
-                <form:label path="attribute"><spring:message code="box.label.attribute"/>:</form:label>
-                <form:input path="attribute" size="20"/>
-                <form:errors path="attribute" cssClass="error" element="div"/>
+                <form:label path="attributes"><spring:message code="box.label.attributes"/>:</form:label>
+                <form:input path="attributes" size="20"/>
+                <form:errors path="attributes" cssClass="error" element="div"/>
             </div>
             <div>
                 <input type="submit" value="<spring:message code="box.create.page.submit.label"/>"/>
